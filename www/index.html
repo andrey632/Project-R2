@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>omni_chat_panel</title>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+       <script src="js/script.js" defer></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="main" class="page-layout">
+	<aside class="sidebar-wrapper">
+		<div class="sidebar">	
+		<nav class="navbar">
+			<div class="navbar-header">
+			    <a class="" href="#"><img src="img/logo.png"></a>	
+			</div>
+		</nav>
+		<div id="navbar" class="collapsed">	
+			<ul class="nav nav-sidebar">
+			      	 <li class="nav-menu"><a href="#/home"><i class="fa fa-home" aria-hidden="true"></i> Главная</a></li>
+                     <li class="nav-menu"><a href="#/publication"><i class="fa fa-comment" aria-hidden="true"></i> Публикация</a></li>
+                     <li class="nav-menu"><a href="#/dispatch"><i class="fa fa-envelope" aria-hidden="true"></i> Рассылка</a></li>
+				     <li class="nav-menu"><a href="#/settings"><i class="fa fa-cog" aria-hidden="true"></i> Настройки</a></li>
+			</ul>
+		</div>	
+		</div>
+	</aside>
+	<main class="main">
+	    <div id="1" style="display:block">
+	    <h1>Главная</h1>
+	    </div>
+	   
+        
+          <div id="2" style="display:none"><h1>Публикация</h1>
+	        <div class="tab-check_messanger">
+             <form action="handler.php">
+              <p><b>Выберите каналы в которые необходимо отправить пост</b></p>
+               <div class="img_check_messanger">
+                  <fieldset>
+                        <legend>Мессенджеры</legend>
+                         <img src="/img/logo_messengers/vk.png" class="img-publication"><br>
+                        <input type="checkbox" name="messanger" value="Telegram" class="img-publication2">Telegram
+                        <input type="checkbox" name="messanger" value="Facebook_messenger" class="img-publication2">Facebook Messenger
+                        <input type="checkbox" name="messanger" value="VK" class="img-publication2">VK
+                        </fieldset>  
+               </div>
+            </div>
+            
+            <div class="text">
+	           <!-- <form action="handler.php">--> 
+                      <p><b>Введите текст поста:</b></p>
+                      <p><textarea name="text"></textarea></p>
+                        <input class="clear-button" value="Очистить" type="reset" />
+                                           <input class="send-button" type="submit">
+                 </form>
+             </div>
+	    </div>
+	    
+	    
+	    <div id="3"style="display:none">    
+            <h1>Рассылки</h1>
+	            <div class="tab-dispatch">
+	            <img src="/img/work2.jpg" class="img-dispatch"> 
+	            <p> Данный раздел находится в разработке. Планируется, что здесь будет вывод таблицы из Базы данных с именами клиентов.<br>
+	                Выбрав определенных клиентов  из таблицы. Им в любой/все  каналы можно будет написать личное сообщение. </p>
+	            </div>
+	    </div>
+	    
+	    
+	    <div id="4"style="display:none"><h1>Настройки</h1>
+            <div class="tab-settings"> 
+<table id="messages">
+    <tr class="mess_hide">
+        <td class="time"></td>
+        <td class="name"></td>
+        <td class="message"></td>
+    </tr>
+</table></div>
+	    
+	    </div>
+	</main>
+</div>
+</body>
+</html>
