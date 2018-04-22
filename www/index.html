@@ -37,12 +37,13 @@
 	<main class="main">
 	    <div id="1" style="display:block">
 	    <h1>Главная</h1>
+	        
 	    </div>
 	   
         
           <div id="2" style="display:none"><h1>Публикация</h1>
 	        <div class="tab-check_messanger">
-             <form action="handler.php">
+             <form action="1.php" method="post" >
               <p><b>Выберите каналы в которые необходимо отправить пост</b></p>
                <div class="img_check_messanger">
                   <fieldset>
@@ -51,10 +52,9 @@
                         <input type="checkbox" name="messanger" value="Telegram" class="img-publication2">Telegram
                         <input type="checkbox" name="messanger" value="Facebook_messenger" class="img-publication2">Facebook Messenger
                         <input type="checkbox" name="messanger" value="VK" class="img-publication2">VK
-                        </fieldset>  
+                        </fieldset> 
                </div>
             </div>
-            
             <div class="text">
 	           <!-- <form action="handler.php">--> 
                       <p><b>Введите текст поста:</b></p>
