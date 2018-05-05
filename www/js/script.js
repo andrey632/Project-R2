@@ -1,11 +1,48 @@
 var q =document.getElementsByClassName('nav-menu');
 console.log(q);
 
+var url=location.hash
+console.log(url)  //смотрит хеш
+
+
+if (url == '#/home')
+    {
+     var obj = document.getElementById(1);
+     obj.style.display = "block"
+    }
+
+if (url == '#/publication')
+    {
+     var obj = document.getElementById(2);
+     obj.style.display = "block"
+     var obj = document.getElementById(1);
+     obj.style.display = "none"
+    }
+
+if (url == '#/dispatch')
+    {
+     var obj = document.getElementById(3);
+     obj.style.display = "block"
+     var obj = document.getElementById(1);
+     obj.style.display = "none"
+    }
+
+
+if (url == '#/settings')
+    {
+     var obj = document.getElementById(4);
+     obj.style.display = "block"
+    var obj = document.getElementById(1);
+     obj.style.display = "none"
+    }
+
+
+
 for (var i=0; i<q.length; i++){
     q[i].onclick= menuTab;
 }
 
-
+// переключение между вкладкками----------------------------------------
 
 function menuTab(){
     console.log(this.innerText);
@@ -66,6 +103,10 @@ function menuTab(){
             
         }
 }
+
+//=================================================================================================
+
+
 
 $.getJSON('config.json', callback);
 
